@@ -20,6 +20,7 @@ import ArtistList from './pages/artist-list/ArtistList';
 import Home from './pages/home/Home';
 import ReviewRegister from './pages/review/ReviewRegister';
 import Artistedit from './pages/artist-register/ArtistEdit';
+import { Nothing } from './nothing';
 
 /** @todo 도메인 주소 입력 */
 // axios.defaults.baseURL = '';
@@ -95,6 +96,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Nothing></Nothing>
   </React.StrictMode>
 );
 
