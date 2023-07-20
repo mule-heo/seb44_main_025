@@ -19,7 +19,7 @@ import {
   useGetMemberPerformanced,
   useGetMemberReview,
 } from '../../api/useFetch';
-import { H1Title } from '../../utils/SlideUp';
+import { H1Title } from '../../theme/common/SlideUp';
 
 export default function Mypage() {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ export default function Mypage() {
           <S.SubTitleWrappar>
             <S.SubTitle>나의 정보</S.SubTitle>
             <S.UserEditButtonWrappar>
-              <Link to="/editmypage">
+              <Link to={`/editmypage/${getCookie('userInfo').memberId}`}>
                 <EditIcon />
               </Link>
             </S.UserEditButtonWrappar>
