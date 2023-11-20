@@ -20,7 +20,9 @@ export const useGetPerformance = (id: string | number | undefined) => {
       .then(response => response.data)
       .then(data => setData(data?.data))
       .catch(err => {
-        console.log(err);
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
         // TODO: 정보를 가져오지 못했을 시 Not Found 페이지 표시
         // 비정상적으로 접근한 페이지를 history에 남기지 않기 위해 replace 사용
         // navigate('/404', { replace: true });
@@ -60,7 +62,10 @@ export const useGetPerformances = (
       .catch(err => {
         // 토큰에 의하여 요청이 취소된 경우에는 console에 메시지 출력하지 않음
         if (err.code === 'ERR_CANCELED') return;
-        console.error(err);
+
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.error(err);
+        return err;
       });
   };
 
@@ -111,7 +116,9 @@ export const useGetArtists = (
       })
       .catch(err => {
         if (err.code === 'ERR_CANCELED') return;
-        console.log(err);
+
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
       });
   };
 
@@ -130,7 +137,8 @@ export const useGetArtists = (
       })
       .catch(err => {
         if (err.code === 'ERR_CANCELED') return;
-        console.log(err);
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
       });
   };
 
@@ -177,9 +185,11 @@ export const useGetArtist = (id: string | number | undefined) => {
         return setData(data.data);
       })
       .catch(err => {
-        console.log(err);
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
         alert('아티스트 정보를 불러오지 못했습니다.');
         navigate('/artists', { replace: true });
+        return err;
       });
   };
   useEffect(() => {
@@ -202,7 +212,11 @@ export const useGetArtistPerfomance = (id: string | number | undefined) => {
       .then(data => {
         setData(data.data);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -222,7 +236,11 @@ export const useGetArtistPerfomanced = (id: string | number | undefined) => {
         }?page=1&size=5&performanceStatus=공연완료`
       )
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -238,7 +256,11 @@ export const useGetArtistReview = (id: string | number | undefined) => {
     await instance
       .get<Review[]>(`/review/artistPage/${id}`)
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -276,7 +298,11 @@ export const useGetMember = () => {
           { path: '/' }
         );
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -292,7 +318,11 @@ export const useGetReservations = () => {
       // 공연받아오는 endpoint에 맞게 수정해주기
       .get<ReservationType[]>('/reservation/mypage')
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -310,7 +340,11 @@ export const useGetMemberPerformance = () => {
         '/reservation/mypage?performanceStatus=공연진행중'
       )
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -326,7 +360,11 @@ export const useGetMemberPerformanced = () => {
       // 공연받아오는 endpoint에 맞게 수정해주기
       .get<ReservationType[]>('/reservation/mypage?performanceStatus=공연완료')
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -342,7 +380,11 @@ export const useGetMemberReview = () => {
     await authInstance
       .get<Review[]>('/review/mypage')
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();
@@ -358,7 +400,11 @@ export const useGetReview = (id: string | number | undefined) => {
     await instance
       .get<Review>(`/review/${id}`)
       .then(data => setData(data.data))
-      .catch(err => console.log(err));
+      .catch(err => {
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.log(err);
+        return err;
+      });
   };
   useEffect(() => {
     getData();

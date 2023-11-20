@@ -27,7 +27,9 @@ const Home = () => {
         const response = await instance.get('/performance?page=1&size=5');
         setCarouselList(response.data.data);
       } catch (error) {
-        console.error(error);
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.error(error);
+        return error;
       }
     };
 
@@ -40,7 +42,9 @@ const Home = () => {
           .reverse();
         setArtistList(copy);
       } catch (error) {
-        console.error(error);
+        // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+        // console.error(error);
+        return error;
       }
     };
     getArtistsData();

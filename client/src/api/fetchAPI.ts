@@ -16,7 +16,11 @@ export const getMember = async () => {
       },
     })
     .then(data => data.data)
-    .catch(err => console.log(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 // Performance - POST, PATCH, DELETE
@@ -29,7 +33,11 @@ export const postPerformance = async (body: BodyType) => {
       },
     })
     .then(data => data.data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 export const patchPerformance = async (
@@ -43,7 +51,11 @@ export const patchPerformance = async (
       },
     })
     .then(data => data.data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 export const deletePerformance = async (performanceId: string | number) => {
@@ -57,7 +69,11 @@ export const deletePerformance = async (performanceId: string | number) => {
         return false;
       }
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 // Reservation - GET, POST, DELETE
@@ -68,7 +84,11 @@ export const getReservation = async (
   const data = await authInstance
     .get(`/reservation/${memberId}/${reservationId}`)
     .then(data => data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 
   return data;
 };
@@ -81,14 +101,22 @@ export const postReservation = async (body: BodyType) => {
       },
     })
     .then(data => data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 export const deleteReservation = async (reservationId: string | number) => {
   const data = await authInstance
     .delete(`/reservation/${reservationId}`)
     .then(data => data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 
   return data;
 };
@@ -103,7 +131,11 @@ export const usePostArtist = async (body: BodyType) => {
     .then(data => {
       return data;
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 
   return data;
 };
@@ -122,7 +154,11 @@ export const usePatchArtist = async (
     .then(data => {
       return data;
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 
   return data;
 };
@@ -137,7 +173,11 @@ export const usePostArtistImg = async (body: BodyType) => {
     .then(data => {
       return data;
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 
   return data;
 };
@@ -157,7 +197,11 @@ export const postReview = async (
       },
     })
     .then(data => data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 export const patchReview = async (
@@ -173,7 +217,11 @@ export const patchReview = async (
       },
     })
     .then(data => data)
-    .catch(err => console.error(err));
+    .catch(err => {
+      // TODO: 콘솔 출력을 삭제하고 에러 핸들링을 추가합니다.
+      // console.error(err)
+      return err;
+    });
 };
 
 export const deleteReview = async (reviewId: string | number) => {
