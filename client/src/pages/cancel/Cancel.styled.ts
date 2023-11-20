@@ -18,7 +18,7 @@ export const Styled_Cancel = {
       height: calc(100vh - (50px * ${screenScale.tablet}));
    `}
   `,
-  Title: styled.header`
+  Title: styled.h1`
     ${FontStyle.heading1}
     color: var(--font-white-color);
     width: 390px;
@@ -44,7 +44,7 @@ export const Styled_Cancel = {
       margin-bottom: calc(20px * ${screenScale.tablet});
    `}
   `,
-  SubTitle: styled.header`
+  SubTitle: styled.h5`
     ${FontStyle.heading5}
     color: var(--font-white-color);
     display: flex;

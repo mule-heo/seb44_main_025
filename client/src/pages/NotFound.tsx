@@ -37,7 +37,7 @@ const S = {
       width: calc(390px * ${screenScale.tablet});
   `}
   `,
-  Title: styled.header`
+  Title: styled.h1`
     font-size: var(--heading1-font-size);
     font-weight: var(--heading1-font-weight);
     line-height: var(--heading1-line-height);

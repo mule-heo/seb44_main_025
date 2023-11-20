@@ -12,7 +12,7 @@ export const Styled_ArtistHome = {
       height: calc(160px * ${screenScale.tablet}); 
     `}
   `,
-  Subtitle: styled.header`
+  Subtitle: styled.p`
     ${FontStyle.largeMedium}
     color: var(--font-light-white-color);
     margin-left: 15px;

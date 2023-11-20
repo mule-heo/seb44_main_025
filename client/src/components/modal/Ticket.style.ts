@@ -51,7 +51,7 @@ export default {
       height: calc(100px * ${screenScale.tablet});
     `}
   `,
-  TicketTitle: styled.header`
+  TicketTitle: styled.h6`
     ${FontStyle.heading6}
     color: var(--font-white-color);
   `,

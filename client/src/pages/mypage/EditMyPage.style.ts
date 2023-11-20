@@ -18,7 +18,7 @@ export default {
       min-height: calc(100vh - (50px * ${screenScale.tablet}));
   `}
   `,
-  Title: styled.header`
+  Title: styled.h1`
     color: var(--font-white-color);
     ${FontStyle.heading1}
     overflow: hidden;
@@ -74,7 +74,7 @@ export default {
       margin-bottom: calc(20px * ${screenScale.tablet});
    `}
   `,
-  SubTitle: styled.header`
+  SubTitle: styled.h5`
     font-size: var(--heading5-font-size);
     font-weight: var(--heading5-font-weight);
     line-height: var(--heading5-line-height);

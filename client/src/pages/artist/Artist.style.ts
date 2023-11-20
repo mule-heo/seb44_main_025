@@ -19,7 +19,7 @@ export default {
       min-height: calc(100vh - (120px * ${screenScale.tablet}));
    `}
   `,
-  Title: styled.header`
+  Title: styled.h1`
     ${FontStyle.heading1};
     color: var(--font-white-color);
     width: 390px;
@@ -128,7 +128,7 @@ export default {
       margin: calc(0px * ${screenScale.tablet}) calc(15px * ${screenScale.tablet}) calc(0px * ${screenScale.tablet}) calc(15px * ${screenScale.tablet});
    `}
   `,
-  SubTitle: styled.header`
+  SubTitle: styled.h5`
     ${FontStyle.heading5};
     color: var(--font-white-color);
     padding: 10px 15px 10px 15px;
@@ -158,7 +158,7 @@ export default {
       margin-left: calc(15px * ${screenScale.tablet});
    `}
   `,
-  EmptyTitle: styled.header`
+  EmptyTitle: styled.p`
     ${FontStyle.smallRegular};
     color: var(--font-highlight-color);
     padding: 0px 15px 10px 15px;

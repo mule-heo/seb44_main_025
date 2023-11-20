@@ -54,7 +54,7 @@ export const Styled_CarouselSlide = {
       height: calc(150px * ${screenScale.tablet});
     `}
   `,
-  ConcertTitle: styled.header`
+  ConcertTitle: styled.h5`
     ${FontStyle.heading5}
     color: var(--font-white-color);
   `,

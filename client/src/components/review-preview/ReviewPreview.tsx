@@ -85,7 +85,7 @@ const S = {
       `}
     }
   `,
-  ReviewTitle: styled.header`
+  ReviewTitle: styled.h6`
     font-size: var(--heading6-font-size);
     font-weight: var(--heading6-font-weight);
     line-height: var(--heading6-line-height);

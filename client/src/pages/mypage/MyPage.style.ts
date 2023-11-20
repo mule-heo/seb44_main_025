@@ -18,7 +18,7 @@ export default {
       min-height: calc(100vh - (120px * ${screenScale.tablet}));
    `}
   `,
-  Title: styled.header`
+  Title: styled.h1`
     color: var(--font-white-color);
     ${FontStyle.heading1}
     overflow: hidden;
@@ -77,7 +77,7 @@ export default {
     justify-content: space-between;
     align-items: center;
   `,
-  SubTitle: styled.header`
+  SubTitle: styled.h5`
     font-size: var(--heading5-font-size);
     font-weight: var(--heading5-font-weight);
     line-height: var(--heading5-line-height);
@@ -109,7 +109,7 @@ export default {
       margin-bottom: calc(10px * ${screenScale.tablet});
    `}
   `,
-  EmptyTitle: styled.header`
+  EmptyTitle: styled.p`
     font-size: var(--p-small-regular-font-size);
     line-height: var(--p-small-regular-font-weight);
     font-weight: var(--p-small-regular-line-height);

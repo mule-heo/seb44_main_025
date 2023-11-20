@@ -170,7 +170,7 @@ const S = {
     flex-direction: column;
     align-items: center;
   `,
-  TicketTitle: styled.header`
+  TicketTitle: styled.h6`
     font-size: var(--heading6-font-size);
     line-height: var(--heading6-line-height);
     font-weight: var(--heading6-font-weight);

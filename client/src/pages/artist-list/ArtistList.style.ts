@@ -26,7 +26,7 @@ export const Main = styled.main`
   align-items: center;
   ${DeviceQuery.tablet`
   width: calc(390px * ${screenScale.tablet});
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - ${120 * screenScale.tablet}px);
 `}
 `;
 export const TitleButtonFlex = styled.div`

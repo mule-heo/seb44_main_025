@@ -40,7 +40,7 @@ const S = {
     width: 360px;
     height: 160px;
   `,
-  Subtitle: styled.header`
+  Subtitle: styled.p`
     font-size: var(--p-large-medium-font-size);
     font-weight: var(--p-large-medium-font-weight);
     line-height: var(--p-large-medium-line-height);
