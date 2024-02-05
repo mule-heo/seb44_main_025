@@ -3,13 +3,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Input } from '../inputs/Inputs';
 import { Button } from '../buttons/Buttons';
 
-// **** 중요: 타입 정의 후 tsx 파일로 변환하기 ****
-declare global {
-  interface Window {
-    kakao: any;
-  }
-}
-
 const { daum, kakao } = window;
 
 export const PostcodeMap = ({
@@ -26,7 +19,7 @@ export const PostcodeMap = ({
   const geocoderRef = useRef<any>(null);
   useEffect(() => {
     setAddress(defaultAddress || '');
-    if (kakao?.maps?.services) {
+    if (kakao.maps) {
       const geocoder = new kakao.maps.services.Geocoder();
       geocoderRef.current = geocoder;
       const mapContainer = divRef.current, // 지도 div
@@ -35,7 +28,7 @@ export const PostcodeMap = ({
           level: 5, // 지도의 확대 레벨
         };
       // map, marker 생성
-      const map = new kakao.maps.Map(mapContainer, mapOption);
+      const map = new kakao.maps.Map(mapContainer as HTMLDivElement, mapOption);
       mapRef.current = map;
       const marker = new kakao.maps.Marker({
         position: new kakao.maps.LatLng(37.556944, 126.923917),
@@ -126,7 +119,7 @@ export const Map = ({ address }: { address: string }) => {
   const markerRef = useRef<any>(null);
   const geocoderRef = useRef<any>(null);
   useEffect(() => {
-    if (kakao?.maps?.services) {
+    if (kakao.maps) {
       const geocoder = new kakao.maps.services.Geocoder();
       geocoderRef.current = geocoder;
       const mapContainer = divRef.current, // 지도 div
@@ -135,7 +128,7 @@ export const Map = ({ address }: { address: string }) => {
           level: 5, // 지도의 확대 레벨
         };
       // map, marker 생성
-      const map = new kakao.maps.Map(mapContainer, mapOption);
+      const map = new kakao.maps.Map(mapContainer as HTMLDivElement, mapOption);
       mapRef.current = map;
       const marker = new kakao.maps.Marker({
         position: new kakao.maps.LatLng(37.556944, 126.923917),
