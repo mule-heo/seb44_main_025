@@ -13,9 +13,9 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "typeRoots": ["./node_modules/@types", "./@types", "./node_modules/kakao.maps.d.ts"],
   },
-  "typeRoots": ["./node_modules/@types", "./@types"],
   "include": ["src", "@types/custom.d.ts"],
   "exclude": ["node_modules", "build"]
 }
